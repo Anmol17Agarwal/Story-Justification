@@ -5,8 +5,8 @@
   "main": "dist/app.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "lint": "eslint src",
-    "lint:format": "eslint --fix src",
+    "lint": "eslint src tests",
+    "lint:format": "eslint --fix src tests",
     "start": "node dist/app.js",
     "start:local": "nodemon --exec babel-node src/app.js",
     "test": "jest i tests"
@@ -37,6 +37,7 @@
     "supertest": "^6.3.3"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "helmet": "^7.1.0",
